@@ -16,11 +16,27 @@ const depthFirstSearch = (root) => {
     return output
 }
 
+const depthFirstSearchPreOrder = (root) => {
+    let output = [];
+    preOrderTraversal(root,output);
+    return output
+}
+
 function inOrderTraversal(root,output) {
     if(root === null) return
     root.left && inOrderTraversal(root.left,output)
     output.push(root.val);
     root.right && inOrderTraversal(root.right,output)
+    return output;
+}
+
+function preOrderTraversal(root,output) {
+    if(root === null) {
+        return;
+    }
+    output.push(root.val);
+    root.left && preOrderTraversal(root.left,output)
+    root.right && preOrderTraversal(root.right,output)
     return output;
 }
 
@@ -33,4 +49,6 @@ root.left.right =  new Node(50);
 root.right.left =  new Node(60);
 root.right.right =  new Node(70);
 
-console.log(depthFirstSearch(root))
+// console.log(depthFirstSearch(root))
+//------------------- Preorder -----------//
+console.log(depthFirstSearchPreOrder(root));
