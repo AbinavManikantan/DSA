@@ -16,11 +16,20 @@ const depthFirstSearch = (root) => {
     return output
 }
 
+// --------------- Pre-Order traversal -------------------- //
+// The algorithm first vist the root node and recursively traverse through the left subtree and 
+// then recursively traverses through the right subtree.
+
+
 const depthFirstSearchPreOrder = (root) => {
     let output = [];
     preOrderTraversal(root,output);
     return output
 }
+
+// --------------- Post-Order traversal -------------------- //
+// The algorithm first recursively traverse through the left subtree and 
+// then recursively traverses through the right subtree and finally the root Node.
 
 const depthFirstSearchPostOrder = (root) => {
     let output = [];
