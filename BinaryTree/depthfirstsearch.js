@@ -7,7 +7,8 @@ class Node {
 }
 
 // --------------- In Order traversal ----------------------- //
-// 
+// The algorithm recursively traverse through the left subtree and then to the root node and 
+// then recursively traverses through the right subtree.
 
 const depthFirstSearch = (root) => {
     let output = [];
